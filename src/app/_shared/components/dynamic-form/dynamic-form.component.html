@@ -1,0 +1,15 @@
+<div class="box" *ngIf="form !== undefined">
+  <form class="full-width" [formGroup]="form">
+
+    <div class="box" *ngFor="let row of dataForm; let formRowIndex = index;">
+      <div class="full-width" *ngFor="let item of dataForm[formRowIndex];"
+           [class.form-field]="item.name !== 'section'"
+           [style.width.%]="calcWidth(dataForm[formRowIndex])">
+        <div class="full-width">
+          <ng-container *ngIf="dataForm[formRowIndex].length > 0;" dynamicDesignerField [field]="returnFormField(item)" [group]="form"></ng-container>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

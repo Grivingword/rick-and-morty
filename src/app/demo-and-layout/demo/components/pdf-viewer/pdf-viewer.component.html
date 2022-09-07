@@ -1,0 +1,14 @@
+<div class="card">
+  <div style="width: 100%; height: 80vh">
+    <ng2-pdfjs-viewer #pdfJsViewerComponent
+                      [pdfSrc]="src"
+                      [viewerFolder]="pdfJsAssetsPath"
+                      [openFile]="false"
+                      [fullScreen]="true"
+                      [diagnosticLogs]="true"
+                      [externalWindow]="false"
+                      [viewBookmark]="false"
+                      viewerId="viewerpdf">
+    </ng2-pdfjs-viewer>
+  </div>
+</div>

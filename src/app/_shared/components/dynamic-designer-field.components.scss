@@ -1,0 +1,31 @@
+.checkbox {
+  p-inputSwitch {
+    background: var(--surface-a);
+    padding: 10px;
+    display: flex;
+    border-radius: 1px;
+    align-items: center;
+    border: 1px solid var(--gray-400);
+  }
+
+  .activate {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pad-item {
+  padding: 5px 15px 5px 10px;
+}

@@ -1,0 +1,38 @@
+<div class="grid p-fluid pt-16">
+    <div class="col-12 md:col-12">
+        <app-dynamic-form #staticFormComponent></app-dynamic-form>
+    </div>
+
+    <div class="col-3 md:col-2">
+        <button pButton pRipple
+                type="button"
+                label="Send"
+                class="mr-2 mb-2"
+                (click)="getFormValue()"
+        ></button>
+    </div>
+    <div class="col-3 md:col-2">
+        <button pButton pRipple
+                type="button"
+                label="Clear"
+                class="mr-2 mb-2"
+                (click)="resetForm()"
+        ></button>
+    </div>
+    <div class="col-3 md:col-2">
+        <button pButton pRipple
+                type="button"
+                label="Disable"
+                class="mr-2 mb-2"
+                (click)="disableForm()"
+        ></button>
+    </div>
+    <div class="col-3 md:col-2">
+        <button pButton pRipple
+                type="button"
+                label="Enable"
+                class="mr-2 mb-2"
+                (click)="enableForm()"
+        ></button>
+    </div>
+</div>

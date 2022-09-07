@@ -1,0 +1,213 @@
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <div class="card p-fluid">
+      <h5>Vertical</h5>
+      <div class="field">
+        <label>Name</label>
+        <input pInputText id="name1" type="text"/>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input pInputText id="email1" type="text"/>
+      </div>
+      <div class="field">
+        <label>Age</label>
+        <input pInputText id="age1" type="text"/>
+      </div>
+
+    </div>
+
+    <div class="card p-fluid">
+      <h5>Vertical Grid</h5>
+      <div class="p-formgrid grid">
+        <div class="field col">
+          <label>Name</label>
+          <input pInputText id="name2" type="text"/>
+        </div>
+        <div class="field col">
+          <label>Email</label>
+          <input pInputText id="email2" type="text"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <div class="card p-fluid">
+      <h5>Horizontal</h5>
+      <div class="field grid">
+        <label class="col-12 mb-2 md:col-2 md:mb-0">Name</label>
+        <div class="col-12 md:col-10">
+          <input pInputText id="name3" type="text"/>
+        </div>
+      </div>
+      <div class="field grid">
+        <label class="col-12 mb-2 md:col-2 md:mb-0">Email</label>
+        <div class="col-12 md:col-10">
+          <input pInputText id="email3" type="text"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h5>Inline</h5>
+      <div class="formgroup-inline">
+        <div class="field">
+          <label class="p-sr-only">Firstname</label>
+          <input pInputText id="firstname1" type="text" placeholder="Firstname"/>
+        </div>
+        <div class="field">
+          <label class="p-sr-only">Lastname</label>
+          <input pInputText id="lastname1" type="text" placeholder="Lastname"/>
+        </div>
+        <button pButton label="Submit"></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h5>Help Text</h5>
+      <div class="field p-fluid">
+        <label>Username</label>
+        <input pInputText id="username" type="text"/>
+        <small>Enter your username to reset your password.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="card">
+      <h5>Advanced</h5>
+      <div class="p-fluid p-formgrid grid">
+        <div class="field col-12 md:col-6">
+          <label>Firstname</label>
+          <input pInputText id="firstname2" type="text"/>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label>Lastname</label>
+          <input pInputText id="lastname2" type="text"/>
+        </div>
+        <div class="field col-12">
+          <label>Address</label>
+          <input pInputText id="address" type="text"/>
+        </div>
+        <div class="field col-12 md:col-6">
+          <label>City</label>
+          <input pInputText id="city" type="text"/>
+        </div>
+        <div class="field col-12 md:col-3">
+          <label>State</label>
+          <p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
+        </div>
+        <div class="field col-12 md:col-3">
+          <label>Zip</label>
+          <input pInputText id="zip" type="text"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="card">
+      <h5>Prime NG</h5>
+      <div class="p-fluid grid">
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText [(ngModel)]="value1">
+            <label for="inputtext">InputText</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" id="inputtext-left" pInputText [(ngModel)]="valueIconLeft">
+            <label for="inputtext-left">Left Icon</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label p-input-icon-right">
+            <i class="pi pi-spin pi-spinner"></i>
+            <input type="text" id="inputtext-right" pInputText [(ngModel)]="valueIconRight">
+            <label for="inputtext-right">Right Icon</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-autoComplete inputId="autocomplete" [(ngModel)]="value2" [suggestions]="filteredCountries"
+                            (completeMethod)="searchCountry($event)" field="name"></p-autoComplete>
+            <label >AutoComplete</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-calendar inputId="calendar" [(ngModel)]="value3"></p-calendar>
+            <label >Calendar</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-chips inputId="chips" [(ngModel)]="value4"></p-chips>
+            <label >Chips</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-inputMask inputId="inputmask" mask="99/99/9999" [(ngModel)]="value5"></p-inputMask>
+            <label >InputMask</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-inputNumber inputId="inputnumber" [(ngModel)]="value6"></p-inputNumber>
+            <label >InputNumber</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-user"></i>
+            </span>
+            <span class="p-float-label">
+                <input type="text" id="inputgroup" pInputText [(ngModel)]="value7">
+                <label for="inputgroup">InputGroup</label>
+            </span>
+          </div>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-cascadeSelect inputId="cascadeSelect" [options]="cascadeSelectCountries" optionLabel="cname"
+                             optionGroupLabel="name"
+                             [optionGroupChildren]="['states', 'cities']"></p-cascadeSelect>
+            <label >CascadeSelect</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="cities" [(ngModel)]="value8"
+                        optionLabel="name"></p-dropdown>
+            <label >Dropdown</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-multiSelect inputId="multiselect" [options]="cities" [(ngModel)]="value9" optionLabel="name"
+                           [filter]="false"></p-multiSelect>
+            <label >MultiSelect</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" [(ngModel)]="value10"
+                      pInputTextarea></textarea>
+            <label >Textarea</label>
+        </span>
+        </div>
+        <div class="field col-12 md:col-4">
+        <span class="p-float-label">
+            <p-password inputId="password" [(ngModel)]="value11"></p-password>
+            <label >Password</label>
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
