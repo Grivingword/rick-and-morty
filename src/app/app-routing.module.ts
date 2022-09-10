@@ -16,7 +16,15 @@ const routes: Routes = [
     children: [
       {
         path: 'character',
-        loadChildren: () => import('./character/character.module').then(m => m.CharacterModule)
+        loadChildren: () => import('./rick-and-morty/character/character.module').then(m => m.CharacterModule)
+      },
+      {
+        path: 'episode',
+        loadChildren: () => import('./rick-and-morty/episode/episode.module').then(m => m.EpisodeModule)
+      },
+      {
+        path: 'location',
+        loadChildren: () => import('./rick-and-morty/location/location.module').then(m => m.LocationModule)
       },
     ]
   },

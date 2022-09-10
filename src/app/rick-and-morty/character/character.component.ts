@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RickyAndMortyService } from '../_core/_services/ricky-and-morty.service';
+import { RickyAndMortyService } from '../../_core/_services/ricky-and-morty.service';
 
 @Component({
     selector: 'app-character',

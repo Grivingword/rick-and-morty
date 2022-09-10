@@ -21,6 +21,8 @@ export class SidebarComponent implements OnInit {
         label: 'Character',
         items: [
           { label: 'Get all characters', icon: 'pi pi-fw pi-id-card', routerLink: ['/layout/character'] },
+          { label: 'Get all episodes', icon: 'pi pi-fw pi-video', routerLink: ['/layout/episode'] },
+          { label: 'Get all locations', icon: 'pi pi-fw pi-send', routerLink: ['/layout/location'] },
           // { label: 'PDF Viewer', icon: 'pi pi-fw pi-file-pdf', routerLink: ['/demo/pdf-viewer'] },
           // { label: 'Dynamic Form', icon: 'pi pi-fw pi-file-pdf', routerLink: ['/demo/dynamic-form'] },
           // { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/demo/uikit/input'] },
